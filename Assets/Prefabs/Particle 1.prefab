@@ -12,8 +12,10 @@ GameObject:
   - component: {fileID: 8423461047832904371}
   - component: {fileID: 590648958440414130}
   - component: {fileID: 7480456240513016854}
+  - component: {fileID: -6141928191481007348}
+  - component: {fileID: -2729068907990654090}
   m_Layer: 0
-  m_Name: Particle
+  m_Name: Particle 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,3 +103,31 @@ MonoBehaviour:
   acceleration: {x: 0, y: 0}
   gravity: {x: 0, y: -9.8}
   inverseMass: 1
+--- !u!114 &-6141928191481007348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8884174885331103408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7588047d374c345a3bdb8baaf842c25f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: -2729068907990654090}
+  activationButton: 0
+--- !u!114 &-2729068907990654090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8884174885331103408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d8eb27ba0fc4a728323687fc117c4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPos: {x: 0, y: 0, z: 0}
+  power: 100

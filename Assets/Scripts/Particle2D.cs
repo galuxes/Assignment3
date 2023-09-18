@@ -18,8 +18,10 @@ public class Particle2D : MonoBehaviour
     {
         // Apply force from each attached ForceGenerator component
         System.Array.ForEach(GetComponents<ForceGenerator>(), generator => { if (generator.enabled) generator.UpdateForce(this); });
-
-        // TODO: YOUR CODE HERE
+        
+        Integrator.Integrate(this, Time.deltaTime);
+        
+        ClearForces();
     }
 
     public void ClearForces()
@@ -29,6 +31,6 @@ public class Particle2D : MonoBehaviour
 
     public void AddForce(Vector2 force)
     {
-        // TODO: YOUR CODE HERE
+        accumulatedForces += force;
     }
 }

@@ -104,7 +104,8 @@ public class Gun : MonoBehaviour
     /// <returns>The created spring object</returns>
     public GameObject FireStaticSpringWeapon()
     {
-        // TODO: YOUR CODE HERE
+        Fire(SpringObject);
+        
         return null;
     }
 
@@ -116,9 +117,7 @@ public class Gun : MonoBehaviour
     /// <returns>The fired object.</returns>
     public GameObject FireAttractorForceWeapon()
     {
-        // TODO: YOUR CODE HERE
-
-        return null;
+        return Fire(ForceObject);
     }
 
     /// <summary>
@@ -129,9 +128,10 @@ public class Gun : MonoBehaviour
     /// <returns></returns>
     public GameObject FireRepulsiveForceWeapon()
     {
-        // TODO: YOUR CODE HERE
-
-        return null;
+        var projectile = FireAttractorForceWeapon();
+        projectile.GetComponent<ForceMouseController>().activationButton = ForceMouseController.MouseButton.RMB;
+        projectile.GetComponent<AttractorForce>().power *= -1;
+        return projectile;
     }
 
     void Update()

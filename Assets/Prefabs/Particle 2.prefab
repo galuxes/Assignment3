@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 8423461047832904371}
   - component: {fileID: 590648958440414130}
   - component: {fileID: 7480456240513016854}
+  - component: {fileID: 3880092785448361926}
   m_Layer: 0
-  m_Name: Particle
+  m_Name: Particle 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,3 +102,18 @@ MonoBehaviour:
   acceleration: {x: 0, y: 0}
   gravity: {x: 0, y: -9.8}
   inverseMass: 1
+--- !u!114 &3880092785448361926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8884174885331103408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fefdb3161325147da90a92e733349156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  other: {fileID: 0}
+  springConstant: 10
+  restLength: 20
