@@ -1,0 +1,20 @@
+{
+    "tests": [
+	{"fullname": "MovementTest.IntegratorTest",
+	 "points": 6},
+	{"fullname": "MovementTest.FixedUpdateTest",
+         "points": 2},
+	{"fullname": "MovementTest.SpringForceTest",
+         "points": 4},
+	{"fullname": "MovementTest.TestAttractorForce",
+         "points": 4},
+	{"fullname": "SceneTests.AttractorTest",
+         "points": 2},
+	{"fullname": "SceneTests.RepulsionTest",
+         "points": 2},
+	{"fullname": "SceneTests.FixedSpringTest",
+         "points": 2},
+	{"fullname": "SceneTests.PairedSpringTest",
+         "points": 2}
+    ]
+}
