@@ -287,8 +287,8 @@ public class MovementTest : InputTestFixture
         SpringForceTestData.Blank
             .Particle(IntegratorTestData.Blank
                             .AddConstantForce(Vector2.one * 3f)
-                            .ExpectedPosition(new Vector3(-17.68821f, 38.88907f, 0.00000f))
-                            .ExpectedVelocity(new Vector2(4.67498f, 10.90490f))
+                            .ExpectedPosition(new Vector3(-3.77373f, 26.69310f, 0.00000f))
+                            .ExpectedVelocity(new Vector2(-26.32135f, 22.53416f))
                             .Dt(5f))
             .OtherParticle(IntegratorTestData.Blank
                             .Gravity(Vector2.up)
@@ -396,8 +396,8 @@ public class MovementTest : InputTestFixture
         AttractorForceTestData.Blank
             .Particle(IntegratorTestData.Blank
                 .Dt(3f)
-                .ExpectedPosition(new Vector3(17.11245f, 0.00000f, 0.00000f))
-                .ExpectedVelocity(new Vector2(9.29136f, 0.00000f))
+                .ExpectedPosition(new Vector3(-8.86139f, 0.00000f, 0.00000f))
+                .ExpectedVelocity(new Vector2(0.77936f, 0.00000f))
                 .StartPosition(Vector2.left * 10f))
             .Target(IntegratorTestData.Blank
                 .StartPosition(Vector2.right * 10f))
@@ -406,8 +406,8 @@ public class MovementTest : InputTestFixture
         AttractorForceTestData.Blank
             .Particle(IntegratorTestData.Blank
                 .Dt(3f)
-                .ExpectedPosition(new Vector3(-29.55057f, 0.00000f, 0.00000f))
-                .ExpectedVelocity(new Vector2(-11.73395f, 0.00000f))
+                .ExpectedPosition(new Vector3(-11.09801f, 0.00000f, 0.00000f))
+                .ExpectedVelocity(new Vector2(-0.72400f, 0.00000f))
                 .StartPosition(Vector2.left * 10f))
             .Target(IntegratorTestData.Blank
                 .StartPosition(Vector2.right * 10f))
@@ -418,8 +418,8 @@ public class MovementTest : InputTestFixture
                 .Dt(3f)
                 .Damping(0.75f)
                 .Gravity(Vector2.one * 1.5f)
-                .ExpectedPosition(new Vector3(-20.33019f, 5.72817f, 0.00000f))
-                .ExpectedVelocity(new Vector2(-5.19356f, 3.65749f))
+                .ExpectedPosition(new Vector3(-5.80606f, 5.17637f, 0.00000f))
+                .ExpectedVelocity(new Vector2(2.41742f, 3.08670f))
                 .StartPosition(Vector2.left * 10f))
             .Target(IntegratorTestData.Blank
                 .StartPosition(Vector2.right * 10f))

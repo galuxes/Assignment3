@@ -91,8 +91,12 @@ public class Gun : MonoBehaviour
     /// <returns>The created spring object (NOT the spring object's target)</returns>
     public GameObject FirePairedSpringWeapon()
     {
-        // TODO: YOUR CODE HERE
-        return null;
+        var obj1 = Fire(SpringObject);
+        var obj2 = Fire(SpringObject);
+
+        obj1.GetComponent<SpringForce>().other = obj2.transform;
+        obj2.GetComponent<SpringForce>().other = obj1.transform;
+        return obj1;
     }
 
 
@@ -104,9 +108,11 @@ public class Gun : MonoBehaviour
     /// <returns>The created spring object</returns>
     public GameObject FireStaticSpringWeapon()
     {
-        Fire(SpringObject);
-        
-        return null;
+        var obj = Fire(SpringObject);
+
+        obj.GetComponent<SpringForce>().other = transform;
+
+        return obj;
     }
 
     /// <summary>
@@ -148,7 +154,7 @@ public class Gun : MonoBehaviour
 
         if (Keyboard.current.enterKey.wasPressedThisFrame)
         {
-            Fire();
+            FireStaticSpringWeapon();
         }
 
         if (Keyboard.current.wKey.wasPressedThisFrame)

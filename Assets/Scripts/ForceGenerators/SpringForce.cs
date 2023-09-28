@@ -12,8 +12,11 @@ public class SpringForce : ForceGenerator
 
     public override void UpdateForce(Particle2D particle)
     {
-        Vector2 direction = other.position - transform.position;
-        Vector2 force = -1 * (springConstant * restLength) * direction;
+        if (!other) return;
+        
+        Vector2 direction = transform.position - other.position;
+        float distance = direction.magnitude - restLength;
+        Vector2 force = direction.normalized * (-(springConstant) * distance);
         particle.AddForce(force);
     }
 }
