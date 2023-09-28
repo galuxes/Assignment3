@@ -28,6 +28,8 @@ jobs:
         with:
           projectPath: .
           testMode: PlayMode
+          customImage: 'unityci/editor:ubuntu-2022.3.4f1-linux-il2cpp-1'
+
 
       - name: Parse test results
         if: always()
